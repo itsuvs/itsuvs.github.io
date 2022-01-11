@@ -1,0 +1,19 @@
+---
+layout: default
+title: Artworks
+---
+
+<div class="artworks-container">
+  <h2 class="page-heading">A Collection Of My Digital Artworks</h2>
+  <div class="artworks">
+    {% for art in site.categories['artworks'] %}
+    <div class="artwork-clip">
+      <h3 class="artwork-heading">{{ art.title }}</h3>
+      <p class="posted-on">
+          Posted On: {{ art.date | date: '%B %d, %Y' }}
+      </p>
+      {{ art.excerpt }}
+    </div>
+    {% endfor %}
+  </div>
+</div>

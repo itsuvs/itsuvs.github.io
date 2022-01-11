@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="single-blog-container">
+  <div class="blog-content">
+    <h2 class="spacing">{{ page.title }}</h2>
+  
+    <div class="blog-post spacing">
+      <p class="date">Posted On: {{ page.date | date: '%B %d, %Y' }}</p>
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

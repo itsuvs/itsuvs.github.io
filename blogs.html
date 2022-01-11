@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blogs-container">
+  <h2 class="page-heading">Blogs</h2>
+    {% for blog in site.categories['blogs'] %}
+      <div class="blog-clip">
+        <h3 class="blog-heading"><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+        <p class="posted-on">
+            Posted On: {{ blog.date | date: '%B %d, %Y' }}
+        </p>
+        {{ blog.excerpt }}
+      </div>
+    {% endfor %}
+</div>

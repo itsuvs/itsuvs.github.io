@@ -1,0 +1,24 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="projects-container">
+  <h2 class="page-heading">Projects</h2>
+  <div class="projects">
+    {% for project in site.categories['projects'] %}
+    <div class="project-clip">
+      <div class="image-holder">
+        {{ project.excerpt }}
+      </div>
+      <div class="detail-holder">
+        <div class="project-heading"> Client: {{ project.title }}</div>
+        <div class="project-info">{{ project.info }}</div>
+        <a href={{project.link}} target="_blank">
+          Visit ->
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
