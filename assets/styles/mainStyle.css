@@ -29,7 +29,6 @@ header{
     justify-content: space-between;
     align-items: center; 
     box-sizing: border-box;
-    /* background-color: transparent; */
     z-index: 10;
     height: 60px;
     background-color: rgb(128,0,32);
@@ -42,6 +41,11 @@ div.logo{
     font-style: italic;
     position: relative;
     top: 2px;
+}
+
+div.logo a{
+    color: white;
+    text-decoration: none;
 }
 
 div.hamburger-straight{

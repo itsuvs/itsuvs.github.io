@@ -44,6 +44,11 @@ div.logo{
     top: 2px;
 }
 
+div.logo a{
+    color: white;
+    text-decoration: none;
+}
+
 div.hamburger-straight{
     height: 25px;
     display: flex;

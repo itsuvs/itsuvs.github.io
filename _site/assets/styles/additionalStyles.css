@@ -207,6 +207,18 @@ div.blogs-container .blog-clip .blog-heading a{
     text-decoration: none;
 }
 
+div.blogs-container a{
+    display: block;
+    width: 80px;
+    background-color: #800020;
+    margin-top: 20px;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
 div.blogs-container .blog-clip .posted-on{
     color: black;
     font-style: italic;
@@ -271,11 +283,25 @@ div.single-blog-container .content ul li{
 
     div.projects-container .projects{
         grid-template-columns: 1fr;
-        grid-row-gap: 10px;
+        grid-row-gap: 15px;
     }
+
+    div.projects-container .projects .project-clip{
+        width: 280px;
+    }
+
+    div.projects-container .project-clip img{
+        width: 120px;
+        height: 100%;
+    }  
 
     div.about-container .about-para{
         width: 250px;
+    }
+
+    div.artworks-container .artwork-clip img{
+        width: 280px;
+        height: 280px;
     }
 
 }
