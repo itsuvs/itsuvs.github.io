@@ -175,6 +175,40 @@ div.projects-container a{
     text-decoration: none;
 }
 
+/* Learnings page related styles */
+
+div.learnings-container{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+div.learnings-container .learnings{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+div.learnings-container .page-heading{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+}
+
+div.learnings-container .learnings li{
+    list-style: none;
+}
+
+div.learnings-container .learnings a{
+    width: 100%;
+    text-decoration: none;
+}
+
+
 /* Blogs page related styles  */
 
 div.blogs-container{
