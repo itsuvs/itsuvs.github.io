@@ -9,7 +9,7 @@ At last, my portfolio website is ready. [Thanks for the applause!]
 
 <br/>Coming to the point, this is my very first blog here. After all failed attempts at blogging, this time I have decided to keep it simple. No more niche, no more stress. This time I would write whatever suits my mood. That means sometimes it would be about something techy and sometimes it would simply be about life, sometimes it would be about my favorite movie and other times it would be about current affairs.
 
-<br/>I believe working as a copywriter inspired an urge in me to continue writing as a hobby. After all, the task that sometimes frustrates me so much also helps me calm down. But there are a few things I need to stop if I want to keep writing regularly. Those things would be:
+<br/>I believe working as a copywriter inspired an urge in me to continue writing as a hobby. After all, the activity that sometimes frustrates me so much also helps me calm down. But there are a few things I need to stop if I want to keep writing regularly. Those things would be:
 
 <ul>
     <li>
