@@ -1,13 +1,31 @@
-div.homepage{
-    width: 100%;
-    background-color: black;
+.hero-section {
+    padding: var(--space-lg) 0;
 }
 
-div.homepage-background{
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-image: url('../images/portfolio-me-min.webp');
-    background-size: auto 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
+.intro-text {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    color: var(--text-color);
+}
+
+.intro-text em {
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.sub-intro {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: var(--space-lg);
+}
+
+.home-sections {
+    margin-top: var(--space-lg);
+}
+
+.section-group {
+    margin-bottom: 80px;
 }

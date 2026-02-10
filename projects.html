@@ -3,22 +3,23 @@ layout: default
 title: Projects
 ---
 
-<div class="projects-container">
-  <h2 class="page-heading">Projects</h2>
-  <div class="projects">
+<div class="space-y-12">
+  <div class="mb-10">
+    <h2 class="text-xl text-gray-500 dark:text-gray-400 font-normal italic">
+      A collection of my recent projects, from web applications to creative experiments.
+    </h2>
+  </div>
+
+  <div class="space-y-12">
     {% for project in site.categories['projects'] %}
-    <div class="project-clip">
-      <div class="image-holder">
-        {{ project.excerpt }}
-      </div>
-      <div class="detail-holder">
-        <div class="project-heading"> Client: {{ project.title }}</div>
-        <div class="project-info">{{ project.info }}</div>
-        <a href={{project.link}} target="_blank">
-          Visit ->
-        </a>
-      </div>
-    </div>
+    <article>
+      <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{ project.date | date:
+        "%d %b %Y" }}</span>
+      <h2 class="text-3xl font-bold mb-2 transition-colors hover:text-accent dark:hover:text-accent-dark">
+        <a href="{{ project.url }}">{{ project.title }}</a>
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">{{ project.info }}</p>
+    </article>
     {% endfor %}
   </div>
 </div>

@@ -1,19 +1,26 @@
 ---
 layout: default
-title: Blog
+title: Blogs
 ---
 
-<div class="blogs-container">
-  <h2 class="page-heading">Blogs</h2>
+<div class="space-y-12">
+  <div class="mb-10">
+    <h2 class="text-xl text-gray-500 dark:text-gray-400 font-normal italic">
+      Writing about design, code, and the things that inspire me.
+    </h2>
+  </div>
+
+  <div class="space-y-12">
     {% for blog in site.categories['blogs'] %}
-      <div class="blog-clip">
-        <h3 class="blog-heading">{{ blog.title }}</h3>
-        <p class="posted-on">
-            Posted On: {{ blog.date | date: '%B %d, %Y' }}
-        </p>
-        <a href={{blog.url}}>
-          View Blog ->
-        </a>
-      </div>
+    <article>
+      <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{ blog.date | date:
+        "%d %b %Y" }}</span>
+      <h2 class="text-3xl font-bold mb-2 transition-colors hover:text-accent dark:hover:text-accent-dark">
+        <a href="{{ blog.url }}">{{ blog.title }}</a>
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">{{ blog.excerpt | strip_html | truncate: 200
+        }}</p>
+    </article>
     {% endfor %}
+  </div>
 </div>

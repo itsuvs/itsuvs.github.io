@@ -2,11 +2,28 @@
 layout: default
 ---
 
-<div class="container">
-    <h2 class="spacing">{{ page.title }}</h2>
-  
-    <div class="blog-post spacing">
-      <p class="summary">{{ page.category }}<span class="date">{{ page.date | date: '%B %d, %Y' }}</span></p>
-      {{ content }}
+<article class="max-w-detail mx-auto">
+  <header class="text-center mb-16">
+    <div class="libretto-pin"></div>
+    <p class="font-serif italic text-accent dark:text-accent-dark mb-4 libretto-date">{{ page.category }} &bull; {{
+      page.date | date: "%Y" }}</p>
+    <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight mb-8">{{ page.title }}</h1>
+
+    {% if page.link %}
+    <div class="mt-8">
+      <a href="{{ page.link }}" target="_blank"
+        class="inline-block px-8 py-3 border border-accent dark:border-accent-dark rounded-full font-serif italic text-accent dark:text-accent-dark hover:bg-accent hover:text-white dark:hover:bg-accent-dark dark:hover:text-black transition-all">
+        Visit Live Project &rarr;
+      </a>
     </div>
-</div>
+    {% endif %}
+  </header>
+
+  <div class="libretto-content font-serif text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-200">
+    {{ content }}
+  </div>
+
+  <footer class="mt-20 text-right font-serif italic text-accent dark:text-accent-dark hover:underline transition-all">
+    <a href="/projects.html">More Projects &rarr;</a>
+  </footer>
+</article>
