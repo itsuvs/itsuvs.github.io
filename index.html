@@ -1,9 +1,72 @@
 ---
 layout: default
-title: Hi, you've reached Ujjwal
+title: Home
 ---
-<div class="homepage">
-    <div class="homepage-background">
 
+<div class="space-y-12">
+    <article class="max-w-none border-t-4 border-b-4 border-gray-100 dark:border-gray-800 py-6">
+        <h2 class="text-4xl font-bold mb-10">A Little Something About Me</h2>
+
+        <div class="flex flex-col md:flex-row gap-10 items-start">
+            <div class="flex-1 space-y-5">
+                <p class="text-2xl font-normal leading-relaxed text-gray-700 dark:text-gray-200">
+                    I am a self-taught coder, a mediocre hacker and a wannabe artist.
+                </p>
+                <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
+                    I used to work in advertising but building cool internet products is my latest gig now and I am
+                    totally
+                    loving it.
+                </p>
+                <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Forever a star-gazing wanderer, a misfit, always questioning, always seeking and constantly feeling
+                    burdened with a glorious purpose. I am the kind of person who looks for depth even in the shallowest
+                    places and who loves to root for
+                    the underdogs no matter what the circumstances be.
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <div class="mb-10">
+        <h2 class="text-xl text-gray-500 dark:text-gray-400 font-normal italic">
+            One stop daily art, tech & inspiration.
+        </h2>
+    </div>
+
+    <div>
+        <span class="block text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-8">Latest
+            Projects</span>
+        <div class="space-y-12">
+            {% for project in site.categories['projects'] limit:3 %}
+            <article>
+                <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{
+                    project.date | date: "%d %b %Y" }}</span>
+                <h2 class="text-3xl font-bold mb-2 transition-colors hover:text-accent dark:hover:text-accent-dark">
+                    <a href="{{ project.url }}">{{ project.title }}</a>
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">{{ project.info | truncate: 150 }}
+                </p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div>
+        <span
+            class="block text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-8 mt-16">Recent
+            Articles</span>
+        <div class="space-y-12">
+            {% for blog in site.categories['blogs'] limit:3 %}
+            <article>
+                <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{ blog.date
+                    | date: "%d %b %Y" }}</span>
+                <h2 class="text-3xl font-bold mb-2 transition-colors hover:text-accent dark:hover:text-accent-dark">
+                    <a href="{{ blog.url }}">{{ blog.title }}</a>
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">{{ blog.excerpt | strip_html |
+                    truncate: 150 }}</p>
+            </article>
+            {% endfor %}
+        </div>
     </div>
 </div>

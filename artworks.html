@@ -3,17 +3,32 @@ layout: default
 title: Artworks
 ---
 
-<div class="artworks-container">
-  <h2 class="page-heading">A Collection Of My Digital Artworks</h2>
-  <div class="artworks">
+<div class="space-y-12">
+  <div class="mb-10">
+    <h2 class="text-xl text-gray-500 dark:text-gray-400 font-normal italic">
+      A collection of my digital experiments and visual explorations.
+    </h2>
+  </div>
+
+  <div class="space-y-12">
     {% for art in site.categories['artworks'] %}
-    <div class="artwork-clip">
-      <h3 class="artwork-heading">{{ art.title }}</h3>
-      <p class="posted-on">
-          Posted On: {{ art.date | date: '%B %d, %Y' }}
-      </p>
-      {{ art.excerpt }}
-    </div>
+    <article>
+      <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{ art.date | date: "%d
+        %b %Y" }}</span>
+      <h2 class="text-3xl font-bold mb-4 transition-colors hover:text-accent dark:hover:text-accent-dark">
+        <a href="{{ art.url }}">{{ art.title }}</a>
+      </h2>
+      <div class="prose dark:prose-invert">
+        {{ art.excerpt }}
+      </div>
+    </article>
     {% endfor %}
   </div>
 </div>
+
+<style>
+  /* Scoped style for artwork excerpts since they contain images */
+  article img {
+    @apply max-w-full h-auto rounded shadow-sm mt-4;
+  }
+</style>
