@@ -1,0 +1,19 @@
+# Jekyll Configuration
+title: Ujjwal
+description: Personal portfolio and blog
+baseurl: ""
+url: "https://itsuvs.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
