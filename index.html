@@ -50,39 +50,69 @@ title: Home
         </div>
     </div>
 
-    <div>
-        <span
-            class="block text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-8 underline py-2">Latest
-            Projects</span>
-        <div class="space-y-12">
-            {% for project in site.categories['projects'] limit:3 %}
-            <article>
-                <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{
-                    project.date | date: "%d %b %Y" }}</span>
-                <h2 class="text-2xl font-bold mb-2 transition-colors hover:text-accent dark:hover:text-accent-dark">
-                    <a href="{{ project.url }}">{{ project.title }}</a>
-                </h2>
-                <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">{{ project.info | truncate: 150 }}
-                </p>
+    <div class="mt-20">
+        <div class="flex items-center justify-between mb-10 pb-2 border-b-2 border-gray-100 dark:border-gray-800">
+            <span class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em]">Latest
+                Projects</span>
+            <a href="/projects.html"
+                class="text-xs font-bold text-accent dark:text-accent-dark uppercase tracking-widest hover:underline">View
+                All &rarr;</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for project in site.categories['projects'] limit:2 %}
+            <article class="group cursor-pointer">
+                <a href="{{ project.url }}" class="block">
+                    <span
+                        class="block text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2 font-bold">{{
+                        project.date | date: "%d %b %Y" }}</span>
+                    <h2
+                        class="text-xl font-bold mb-3 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors duration-300">
+                        {{ project.title }}
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
+                        {{ project.info | truncate: 120 }}
+                    </p>
+                    <div
+                        class="mt-4 flex items-center gap-2 text-accent dark:text-accent-dark opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                        <span class="text-xs font-bold uppercase tracking-widest">Case Study</span>
+                        <i class="fas fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
             </article>
             {% endfor %}
         </div>
     </div>
 
-    <div>
-        <span
-            class="block text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-8 mt-16">Recent
-            Articles</span>
-        <div class="space-y-12">
+    <div class="mt-24">
+        <div class="flex items-center justify-between mb-10 pb-2 border-b-2 border-gray-100 dark:border-gray-800">
+            <span class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em]">Recent
+                Writing</span>
+            <a href="/blogs.html"
+                class="text-xs font-bold text-accent dark:text-accent-dark uppercase tracking-widest hover:underline">Read
+                Archive &rarr;</a>
+        </div>
+        <div class="space-y-10">
             {% for blog in site.categories['blogs'] limit:3 %}
-            <article>
-                <span class="block text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">{{ blog.date
-                    | date: "%d %b %Y" }}</span>
-                <h2 class="text-2xl font-bold mb-2 transition-colors hover:text-accent dark:hover:text-accent-dark">
-                    <a href="{{ blog.url }}">{{ blog.title }}</a>
-                </h2>
-                <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed">{{ blog.excerpt | strip_html |
-                    truncate: 150 }}</p>
+            <article class="group">
+                <a href="{{ blog.url }}" class="block">
+                    <div class="md:items-baseline gap-2 md:gap-4 mb-2">
+                        <span
+                            class="block text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2 font-bold">{{
+                            blog.date | date: "%d %b %Y" }}</span>
+                        <h2
+                            class="text-2xl font-bold group-hover:text-accent dark:group-hover:text-accent-dark transition-colors duration-300">
+                            {{ blog.title }}
+                        </h2>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-2xl">
+                        {{ blog.excerpt | strip_html | truncate: 160 }}
+                    </p>
+                    <div
+                        class="mt-4 flex items-center gap-2 text-accent dark:text-accent-dark opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                        <span class="text-xs font-bold uppercase tracking-widest">Read Article</span>
+                        <i class="fas fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
             </article>
             {% endfor %}
         </div>
