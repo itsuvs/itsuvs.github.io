@@ -14,11 +14,21 @@ In this post, I’ll walk you through how we cleaned up our Next.js project by i
 
 ## **The Pain of Maintenance**
 
+<br>
+
 In a standard "messy" React app, you often find:
+
+<br>
+
 - **Fat Components**: UI components containing 200+ lines of `useEffect` hooks and API fetching logic.
+<br>
 - **Leaky Abstractions**: API response structures bleeding directly into the UI.
+<br>
 - **Duplication**: The same data transformation logic being copied across multiple pages.
+<br>
 - **Testing Nightmares**: Trying to unit test a component that requires mocking 5 global states and 3 API calls.
+
+<br>
 
 To solve this, we moved the "brain" of our application out of the components and into a dedicated `core` folder.
 
@@ -26,7 +36,11 @@ To solve this, we moved the "brain" of our application out of the components and
 
 ## **The Architecture: Entities, Services, and Factories**
 
+<br>
+
 Our new data layer lives in a `core` directory, structured to separate concerns strictly. Here is how it breaks down:
+
+<br>
 
 ### **1. Service Layer Pattern (The Communicators)**
 The `services/` folder is the ONLY place where we interact with the outside world. Whether it's a REST API or a GraphQL endpoint, services handle the networking.
