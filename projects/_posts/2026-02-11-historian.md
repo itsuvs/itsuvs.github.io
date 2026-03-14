@@ -3,10 +3,10 @@ layout: project
 title: Historian
 info: A Chrome extension that tracks and segregates your browser history by domain for better organization and insights.
 category: Projects
-link: https://github.com/itsuvs/historian
+link: https://chromewebstore.google.com/detail/historian-domain-history/jlakjnkgimneckjhbencmhmomcacehpn
 ---
 
-![title](/assets/images/historian.png)
+<!-- ![title](/assets/images/historian.png) -->
 
 <br>
 

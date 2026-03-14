@@ -101,4 +101,4 @@ Building Historian taught me a lot about the nuances of browser APIs and the imp
 
 <br>
 
-Happy coding!
+**Happy coding!**
